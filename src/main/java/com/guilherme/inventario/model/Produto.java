@@ -1,8 +1,9 @@
-package model;
+package com.guilherme.inventario.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("produtos")
 public class Produto {
 
     @Id

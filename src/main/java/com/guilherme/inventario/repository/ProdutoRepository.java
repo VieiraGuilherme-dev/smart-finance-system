@@ -1,14 +1,11 @@
-package repository;
+package com.guilherme.inventario.repository;
 
-import model.Produto;
+import com.guilherme.inventario.model.Produto;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface ProdutoRepository extends MongoRepository<Produto, String> {
-
-    List<Produto> findByCategoria(String categoria);
     Produto findByCodigo(String codigo);
+    List<Produto> findByCategoria(String categoria);
 }

@@ -1,9 +1,8 @@
-package controller;
+package com.guilherme.inventario.controller;
 
-import model.Produto;
-import org.springframework.stereotype.Controller;
+import com.guilherme.inventario.model.Produto;
+import com.guilherme.inventario.service.ProdutoService;
 import org.springframework.web.bind.annotation.*;
-import service.ProdutoService;
 
 import java.util.List;
 
@@ -47,7 +46,7 @@ public class ProdutoController {
         produto.setId(id);
         return service.salvar(produto);
     }
-    
+
     @DeleteMapping("/{id}")
     public void deletarProduto(@PathVariable String id) {
         service.deletar(id);
